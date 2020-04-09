@@ -116,9 +116,8 @@ public class BrowserUtils {
 
     public static void switchWindow(String title){
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
-        windowHandles.forEach(windowhandle -> Driver.getDriver().switchTo().window(windowhandle)); {if (Driver.getDriver().getTitle().equals(title));
+        windowHandles.forEach(windowhandle -> Driver.getDriver().switchTo().window(windowhandle)); {if (Driver.getDriver().getTitle().equals(title));}
 
 
     }
-}
 }
