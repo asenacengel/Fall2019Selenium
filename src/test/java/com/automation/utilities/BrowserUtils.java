@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 public class BrowserUtils {
 
@@ -112,4 +113,12 @@ public class BrowserUtils {
         }
         return path;
     }
+
+    public static void switchWindow(String title){
+        Set<String> windowHandles = Driver.getDriver().getWindowHandles();
+        windowHandles.forEach(windowhandle -> Driver.getDriver().switchTo().window(windowhandle)); {if (Driver.getDriver().getTitle().equals(title));
+
+
+    }
+}
 }
